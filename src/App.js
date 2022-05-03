@@ -10,17 +10,17 @@ const App = () => {
 
   const shorten = (e) => {
 
-    const link ={
-      long_url:long_url
+    const link = {
+      long_url: long_url
     }
 
     const headers = {
       'apiKey': 'DFoN3h6cHZFECoXeRf5qVv54d9T4XNYH'
     }
-    
+
     axios.post("https://test.godigibee.io/pipeline/training/v1/martin-encurtador-url", link, {
-        headers: headers
-      })
+      headers: headers
+    })
 
       .then((response) => {
         console.log(response.data)
@@ -29,24 +29,26 @@ const App = () => {
       .catch((error) => {
         console.log(error)
       })
-      console.log(link)
+    console.log(link)
 
     e.preventDefault()
   }
 
   return (
-    <div className="App">
-      <input type="text" className="input"
-        onChange={(e) => setLong_url(e.target.value)}
-      />
+    <div className="img">
+      <div className="App">
+        <input type="text" className="input"
+          onChange={(e) => setLong_url(e.target.value)}
+        />
 
-      <button className='btn'
-        onClick={shorten}
-      >Shorten</button>
+        <button className='btn'
+          onClick={shorten}
+        >Shorten</button>
 
 
-      <p link className="shorten"
-      >{url1}</p>
+        <p link className="shorten"
+        >{url1}</p>
+      </div>
     </div>
   )
 }

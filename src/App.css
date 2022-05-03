@@ -6,8 +6,9 @@
   flex-direction: column;
   border: 1px solid grey;
   box-shadow: 5px 8px 5px rgba(0,0,0,0.3);
-  margin: 2rem auto;
+  margin: 0rem auto;
   border-radius: 5px;
+  margin-top: 2rem;
 }
 
 .input{
@@ -26,7 +27,7 @@
   max-width: 80%;
   border: none;
   color: white;
-  background-color: orange;
+  background-color: teal;
   border-radius: 5px;
   margin: 10px auto;
 }
